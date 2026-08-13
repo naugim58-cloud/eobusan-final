@@ -5,8 +5,8 @@
   <title>어부산 | 오늘 부산 바다가 골라준 한 끼</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Jua&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=20260813-10">
-  <link rel="stylesheet" href="enhancements.css?v=20260813-10">
+  <link rel="stylesheet" href="style.css?v=20260813-11">
+  <link rel="stylesheet" href="enhancements.css?v=20260813-11">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
   <style>
     .fish-photo{height:74px;border-radius:12px;overflow:hidden;background:#e9f8fc}.fish-photo img,.result-photo{width:100%;height:100%;object-fit:cover}.result-photo{height:105px;border-radius:15px;margin-bottom:9px}.draw-card .result-photo{width:160px;margin:0 auto 7px}
@@ -38,7 +38,7 @@
 
     <section id="rescue" class="page"><p class="eyebrow">SEA RESCUE</p><h1>오늘 바다의<br><b>구조 요청</b></h1><p class="sub">내 구매가 부산 어민의 남는 수산물을 줄여요.</p><div id="rescue-list" class="rescue-list"></div></section>
 
-    <section id="map" class="page"><p class="eyebrow">BUSAN SEA MAP</p><h1>어디에서<br>왔을까요?</h1><p class="sub">부산 바다의 산지와 판매 위치를 보고, 내 위치에서 얼마나 걸리는지 확인하세요.</p><div class="location-panel"><div><b id="location-status">내 위치를 확인하면 거리와 예상 시간이 표시돼요.</b><small>위치는 저장·전송하지 않으며 이동시간은 직선거리 기준 예상치예요.</small></div><button id="locate-button" type="button" onclick="requestUserLocation()">📍 GPS 내 위치</button></div><div id="busan-real-map" class="real-map" aria-label="부산 수산물 산지와 판매자 위치 지도"></div><div class="map-legend"><span class="catch-key">● 어획 포인트</span><span class="seller-key">◆ 판매자</span><span class="user-key">● 내 위치</span></div><section class="catch-guide"><p>BUSAN CATCH POINTS</p><h2>🌊 부산 어획 포인트 안내</h2><div id="catch-point-guide" class="catch-point-guide"></div></section><div id="travel-list" class="travel-list" aria-live="polite"></div><div id="area-result" class="area-result">바다나 판매자 카드를 누르면 오늘 입고 정보가 표시돼요.</div></section>
+    <section id="map" class="page"><p class="eyebrow">BUSAN SEA MAP</p><h1>어디에서<br>왔을까요?</h1><p class="sub">부산 바다의 산지와 판매 위치를 보고, 내 위치에서 얼마나 걸리는지 확인하세요.</p><div class="location-panel"><div><b id="location-status">내 위치를 확인하면 거리와 예상 시간이 표시돼요.</b><small>위치는 저장·전송하지 않으며 이동시간은 직선거리 기준 예상치예요.</small></div><button id="locate-button" type="button" onclick="requestUserLocation()">📍 GPS 내 위치</button></div><div id="busan-real-map" class="real-map" aria-label="부산 수산물 산지와 판매자 위치 지도"></div><div class="map-legend"><span class="catch-key">● 어획 포인트</span><span class="seller-key">◆ 판매자</span><span class="user-key">● 내 위치</span></div><section class="catch-guide"><p>BUSAN CATCH POINTS</p><h2>🌊 부산 어획 포인트 안내</h2><div id="catch-point-guide" class="catch-point-guide"></div></section><div id="area-result" class="area-result">어획 포인트 안내를 누르면 입고 어종과 판매자 정보가 표시돼요.</div></section>
 
     <section id="my" class="page"><p class="eyebrow">MY SEA</p><h1>나의 부산 바다</h1><div class="profile"><span id="user-avatar">🧑‍🚀</span><div><b><span id="user-nickname">바다 구조대</span> Lv.<span id="level">1</span></b><strong id="rescue-title" class="rescue-title">🌱 새내기 구조대원</strong><p id="level-copy">첫 구조를 기다리고 있어요!</p><div class="level-gauge"><span><i id="level-gauge-fill"></i></span><small id="level-gauge-copy">다음 레벨까지 3마리</small></div></div><button type="button" class="avatar-edit" onclick="toggleProfileEditor()">프로필 수정</button></div><section id="avatar-picker" class="avatar-picker hidden"><p>MY PROFILE</p><h2>나만의 구조대원</h2><label class="nickname-label">닉네임<input id="nickname-input" maxlength="12" placeholder="예: 바다수호자"></label><p class="avatar-label">아바타 선택</p><div id="avatar-options"></div><button type="button" class="profile-save" onclick="saveProfile()">프로필 저장</button></section><section class="mileage-card"><span>🪙</span><div><p>SEA MILEAGE</p><b><em id="mileage-count">0</em> M</b><small>미션을 완료하고 마일리지를 모아보세요.</small></div></section><section class="mission-board"><p>SEA QUEST</p><h2>🧭 오늘의 미션</h2><div id="mission-list"></div></section><div class="stats"><div><b id="rescued-count">0</b><span>구조한 수산물</span></div><div><b id="found-count">0</b><span>도감 발견 생물</span></div></div><section class="reward-board"><p>SEA MILEAGE BENEFITS</p><h2>🪙 마일리지 혜택</h2><div id="reward-list"></div></section><section class="history-board"><div class="section-title"><div><p>ORDER HISTORY</p><h2>🧾 구매 내역</h2></div><button onclick="renderPurchaseHistory(true)">전체보기 ›</button></div><div id="purchase-history"></div></section><section class="dex-heading"><p>BUSAN SEA DEX</p><h2>🐠 부산 바다 도감 <span id="dex-progress"></span></h2><p class="sub">구매 완료한 생물이 도감에 등록돼요.</p></section><div id="collection" class="collection"></div></section>
 
@@ -48,5 +48,5 @@
 </div>
 <div id="modal" class="modal hidden"><div class="modal-box"><button class="close" onclick="closeModal()">×</button><div id="modal-content"></div></div></div><div id="toast"></div>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
-<script src="script.js?v=20260813-10"></script>
+<script src="script.js?v=20260813-11"></script>
 </body></html>
