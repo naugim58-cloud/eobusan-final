@@ -3,3 +3,46 @@
 .modal-box{max-height:88vh;overflow-y:auto;padding-bottom:28px}.purchase-button{position:sticky!important;bottom:0;margin-bottom:6px;background:#14c5ce!important;z-index:3}
 .draw-card:after{pointer-events:none;z-index:0}.draw-card .draw-result{position:relative;z-index:1;width:100%;padding:22px 18px}.draw-card.result-ready{display:block;height:auto;min-height:390px;padding:0}.draw-card.result-ready .result-photo{height:140px}.draw-card.result-ready .primary{margin-top:12px}
 .draw-saved{margin-top:34px;padding:18px 14px;border-radius:20px;background:#f1fbfd;text-align:left}.draw-saved>p{margin:0 0 5px;color:#2996b5;font:bold 9px sans-serif;letter-spacing:1px}.draw-saved h2{font-size:20px}.saved-draw{display:grid;grid-template-columns:52px 1fr auto;align-items:center;gap:10px;padding:11px 0;border-bottom:1px solid #d7edf2}.saved-draw:last-child{border-bottom:0}.saved-draw>div{height:52px;overflow:hidden;border-radius:12px;background:#d9eef2}.saved-draw-photo{width:100%;height:100%;object-fit:cover}.saved-draw small,.saved-draw b,.saved-draw em{display:block}.saved-draw small{color:#7190a0;font-size:9px}.saved-draw b{margin:3px 0;color:#174b67;font:15px 'Jua'}.saved-draw em{color:#b17800;font:9px 'Gowun Dodum';font-style:normal}.saved-draw button{border:0;border-radius:10px;padding:9px 8px;background:#d8f3f7;color:#137ca2;font:bold 11px 'Gowun Dodum'}
+.profile{position:relative}.avatar-edit{margin-left:auto;border:0;border-radius:11px;padding:8px 10px;background:#fff;color:#187aa0;font:11px 'Gowun Dodum';font-weight:bold}.avatar-picker{margin:-12px 0 20px;padding:15px;border:1px solid #c8e8f0;border-radius:17px;background:#f5fcfe}.avatar-picker.hidden{display:none}.avatar-picker p{margin:0;color:#2b99b8;font:bold 9px sans-serif;letter-spacing:1px}.avatar-picker h2{margin:4px 0 12px;font-size:18px}.avatar-picker>div{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.avatar-option{padding:9px 3px;border:1px solid #d7e9ee;border-radius:13px;background:#fff;font-size:27px}.avatar-option.selected{border:2px solid #15b7c8;background:#e8fcfe;box-shadow:0 4px 9px #16b6c529}
+.nickname-label{display:block;text-align:left;color:#315f77;font-size:12px;font-weight:bold}.nickname-label input{margin:6px 0 13px}.avatar-picker .avatar-label{margin:0 0 8px;color:#315f77;font:12px 'Gowun Dodum';font-weight:bold;letter-spacing:0}.profile-save{width:100%;margin-top:14px;border:0;border-radius:12px;padding:12px;background:#14c5ce;color:#fff;font:15px 'Jua'}
+.profile .rescue-title{display:inline-block;margin-top:5px;padding:3px 7px;border-radius:9px;background:#d5f4f5;color:#087b9f;font:10px 'Gowun Dodum'}.level-gauge{margin-top:8px}.level-gauge span{display:block;height:8px;overflow:hidden;border-radius:99px;background:#cfe7ec}.level-gauge i{display:block;height:100%;width:0;border-radius:99px;background:linear-gradient(90deg,#12c9ce,#197dda);transition:width .35s ease}.level-gauge small{display:block;margin-top:4px;color:#4c8299;font-size:9px}
+.fish.sold-out{opacity:.6;filter:grayscale(1);background:#eef1f2}.fish.sold-out .fish-photo{position:relative}.sold-tag{position:absolute;inset:0;display:grid;place-items:center;background:#172f3b9c;color:#fff;font:15px 'Jua';letter-spacing:.5px}.fish.sold-out em{color:#64747b}
+.draw-game-ui{position:absolute;z-index:2;top:17px;left:18px;right:18px;display:flex;justify-content:space-between;color:#c9fbff;font:bold 10px sans-serif;letter-spacing:1.6px}.draw-game-ui i{font-style:normal;font-size:15px;animation:sparkle 1.4s infinite}.draw-game-ui i:last-child{animation-delay:.6s}.draw-card.is-drawing .mystery{animation:reel .25s infinite alternate}.draw-tools{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:15px 0 0}.draw-tools button{border:1px solid #bde7ef;border-radius:11px;padding:10px 5px;background:#f2fbfd;color:#197b9f;font:bold 11px 'Gowun Dodum'}.odds-modal .big{font-size:58px}.odds-modal h2{margin:5px}.odds-modal p{font-size:12px;color:#6e8998}.odds-list{max-height:290px;overflow:auto;text-align:left;margin-top:15px}.odds-list div{display:flex;justify-content:space-between;padding:10px 2px;border-bottom:1px solid #e1eef2;font-size:12px}.odds-list b{color:#087ec1}.mission-board{margin:20px 0;padding:16px;border-radius:19px;background:linear-gradient(145deg,#f2fbff,#e8f8f8)}.mission-board>p{margin:0 0 5px;color:#288eb1;font:bold 9px sans-serif;letter-spacing:1px}.mission-board h2{font-size:20px}.mission{display:flex;align-items:center;gap:10px;padding:11px 0;border-bottom:1px solid #d6eaed}.mission:last-child{border:0}.mission>i{display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:#d8e9ee;font-style:normal;filter:grayscale(1)}.mission.done>i{background:#fff0b5;filter:none}.mission span{flex:1}.mission b,.mission small{display:block}.mission b{font-size:12px}.mission small{font-size:9px;color:#668392}.mission em{display:block;height:5px;overflow:hidden;margin-top:5px;border-radius:10px;background:#d3e5ea}.mission u{display:block;height:100%;border-radius:10px;background:#17bfca}.mission strong{color:#0eaf9d;font-size:18px}@keyframes reel{to{transform:rotate(7deg) scale(1.06)}}@keyframes sparkle{50%{transform:scale(1.5);opacity:.4}}
+.mileage-card{display:flex;align-items:center;gap:12px;margin:20px 0;padding:16px;border-radius:19px;background:linear-gradient(135deg,#fff0a5,#ffe2a2);box-shadow:0 8px 18px #e8b4472e}.mileage-card>span{font-size:38px}.mileage-card p,.mileage-card small{display:block;margin:0}.mileage-card p{font:bold 9px sans-serif;letter-spacing:1px;color:#967000}.mileage-card b{display:block;color:#6e5100;font:27px 'Jua'}.mileage-card b em{font-style:normal}.mileage-card small{font-size:9px;color:#8d762a}.mission button{border:0;border-radius:10px;padding:8px 7px;background:#ffce45;color:#6f5000;font:bold 10px 'Gowun Dodum';white-space:nowrap}
+.logo{gap:0!important;font:25px/1 'Jua'!important;letter-spacing:-.7px!important}.logo span{display:block;padding-top:2px}.logo small{margin-top:4px!important;color:#4ba2bf!important;font:8px/1.1 Arial,sans-serif!important;letter-spacing:1.8px!important}
+
+/* 반응형: 모바일은 한 손 조작, PC는 넓은 콘텐츠 영역 */
+@media (min-width:760px){
+ body{padding:24px;background:linear-gradient(135deg,#d8f3f5,#e8f2ff)}
+ .app{width:min(1120px,100%);min-height:calc(100vh - 48px);border-radius:30px;padding-bottom:86px}
+ header{border-radius:30px 30px 0 0;padding:0 34px}
+ main{max-width:1040px;margin:auto}
+ .page{padding:38px 34px 46px}
+ .page#home,.page#rescue,.page#my{max-width:1000px;margin:auto}
+ .region-fish-grid{grid-template-columns:repeat(4,1fr);gap:14px}
+ .fish-photo{height:130px}
+ .fish{padding:14px}
+ .draw-page{max-width:720px;margin:auto}
+ .draw-card{height:340px}
+ .draw-card.result-ready{min-height:430px}
+ .real-map{height:520px}
+ #seller form{display:grid;grid-template-columns:repeat(2,1fr);gap:0 22px}
+ #seller form label{margin:15px 0}
+ #seller form fieldset,#seller form button{grid-column:1 / -1}
+ .modal-box{width:min(680px,100%);max-height:86vh}
+ .modal-box .draw-result{max-width:600px;margin:auto}
+ nav{width:min(1120px,100%);height:78px;border-radius:0 0 30px 30px}
+ .collection{grid-template-columns:repeat(5,1fr)}
+ .stats{max-width:520px}
+ .reward-board,.history-board{max-width:680px}
+}
+@media (max-width:359px){
+ .page{padding-left:14px;padding-right:14px}
+ h1{font-size:27px}
+ .draw-card{height:275px}
+ .primary{font-size:15px}
+ .profile{gap:9px;padding:13px}
+ .avatar-edit{padding:7px;font-size:10px}
+ .modal{padding:10px}.modal-box{padding:17px 13px}
+ .seller-offer{grid-template-columns:34px 1fr auto;gap:5px}
+}
