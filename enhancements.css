@@ -18,6 +18,10 @@
 .real-map{height:clamp(280px,48svh,400px)!important;touch-action:pan-y!important}.map-legend{flex-wrap:wrap}
 @media(max-width:359px){.real-map{height:280px!important}.map-legend{align-items:flex-start;flex-direction:column}}
 
+/* GPS 위치 · 부산 바다 · 판매자 이동 정보 */
+.location-panel{display:flex;align-items:center;gap:12px;margin:16px 0 12px;padding:13px 14px;border:1px solid #c8e8f0;border-radius:16px;background:linear-gradient(135deg,#eefbfe,#f5fffc)}.location-panel>div{min-width:0;flex:1}.location-panel b,.location-panel small{display:block}.location-panel b{color:#176c8e;font-size:12px;line-height:1.45}.location-panel small{margin-top:4px;color:#6f8a98;font-size:9px;line-height:1.45}.location-panel button{flex:0 0 auto;border:0;border-radius:12px;padding:11px 12px;background:#147dac;color:#fff;font:bold 11px 'Gowun Dodum';box-shadow:0 4px 10px #147dac35}.location-panel button:disabled{background:#8aabb8;box-shadow:none}.map-legend{justify-content:flex-start!important}.map-legend span{font-weight:bold}.map-legend .catch-key{color:#ef6755!important}.map-legend .seller-key{color:#176c9b}.map-legend .user-key{margin-left:auto;color:#13a87b}.travel-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin-top:12px}.travel-card{min-width:0;border:1px solid #d5e9ef;border-radius:14px;padding:11px;background:#fff;text-align:left;color:#214e67}.travel-card b,.travel-card small,.travel-card strong{display:block}.travel-card b{font:15px 'Jua'}.travel-card small{margin-top:3px;overflow:hidden;color:#718b99;font-size:9px;text-overflow:ellipsis;white-space:nowrap}.travel-card strong{margin-top:8px;color:#087ec1;font-size:11px}.travel-card.no-location strong{color:#78909c}.area-result{line-height:1.55}.area-result-head{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}.area-result-head strong{flex:0 0 auto;color:#087ec1;font-size:11px}.area-catch-list{margin:9px 0 0}.seller-arrivals{display:grid;gap:7px;margin-top:11px}.seller-arrival{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:9px 10px;border-radius:11px;background:#fff}.seller-arrival span{min-width:0}.seller-arrival b,.seller-arrival small{display:block}.seller-arrival b{overflow:hidden;color:#176c8e;font-size:11px;text-overflow:ellipsis;white-space:nowrap}.seller-arrival small{margin-top:2px;color:#79909c;font-size:9px}.seller-arrival strong{flex:0 0 auto;color:#087ec1;font-size:10px}.leaflet-tooltip.seller-tooltip{border:0;background:#176c9b;color:#fff;font:bold 10px 'Gowun Dodum';box-shadow:0 3px 10px #12325240}.leaflet-tooltip.seller-tooltip:before{border-top-color:#176c9b}.user-location-pulse{width:20px;height:20px;border:4px solid #fff;border-radius:50%;background:#13b887;box-shadow:0 0 0 5px #13b88752;animation:userPulse 1.8s ease-out infinite}@keyframes userPulse{50%{box-shadow:0 0 0 10px #13b88718}}
+@media(max-width:359px){.location-panel{align-items:stretch;flex-direction:column}.location-panel button{width:100%}.travel-list{grid-template-columns:1fr}.map-legend .user-key{margin-left:0}}
+
 /* 반응형: 모바일은 한 손 조작, PC는 넓은 콘텐츠 영역 */
 @media (min-width:760px){
  body{padding:24px;background:linear-gradient(135deg,#d8f3f5,#e8f2ff)}
@@ -33,6 +37,7 @@
  .draw-card{height:340px}
  .draw-card.result-ready{min-height:430px}
  .real-map{height:clamp(400px,58svh,560px)!important}
+ .travel-list{grid-template-columns:repeat(4,minmax(0,1fr))}
  #seller form{display:grid;grid-template-columns:repeat(2,1fr);gap:0 22px}
  #seller form label{margin:15px 0}
  #seller form fieldset,#seller form button{grid-column:1 / -1}
