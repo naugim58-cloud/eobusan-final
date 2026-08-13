@@ -11,6 +11,13 @@
 .mileage-card{display:flex;align-items:center;gap:12px;margin:20px 0;padding:16px;border-radius:19px;background:linear-gradient(135deg,#fff0a5,#ffe2a2);box-shadow:0 8px 18px #e8b4472e}.mileage-card>span{font-size:38px}.mileage-card p,.mileage-card small{display:block;margin:0}.mileage-card p{font:bold 9px sans-serif;letter-spacing:1px;color:#967000}.mileage-card b{display:block;color:#6e5100;font:27px 'Jua'}.mileage-card b em{font-style:normal}.mileage-card small{font-size:9px;color:#8d762a}.mission button{border:0;border-radius:10px;padding:8px 7px;background:#ffce45;color:#6f5000;font:bold 10px 'Gowun Dodum';white-space:nowrap}
 .logo{gap:0!important;font:25px/1 'Jua'!important;letter-spacing:-.7px!important}.logo span{display:block;padding-top:2px}.logo small{margin-top:4px!important;color:#4ba2bf!important;font:8px/1.1 Arial,sans-serif!important;letter-spacing:1.8px!important}
 
+/* 화면 크기·노치 영역 대응 */
+:root{--nav-height:74px}html{min-height:100%;background:#d7edf2}body{min-width:320px;min-height:100dvh}.app{min-height:100dvh;padding-bottom:calc(var(--nav-height) + env(safe-area-inset-bottom) + 8px)}header{padding-left:max(20px,env(safe-area-inset-left));padding-right:max(20px,env(safe-area-inset-right))}nav{height:calc(var(--nav-height) + env(safe-area-inset-bottom));padding-bottom:env(safe-area-inset-bottom)}#toast{bottom:calc(var(--nav-height) + env(safe-area-inset-bottom) + 18px)}
+
+/* 모바일에서는 지도 위에서 스크롤이 끊기지 않도록 지도 높이를 화면에 맞춤 */
+.real-map{height:clamp(280px,48svh,400px)!important;touch-action:pan-y!important}.map-legend{flex-wrap:wrap}
+@media(max-width:359px){.real-map{height:280px!important}.map-legend{align-items:flex-start;flex-direction:column}}
+
 /* 반응형: 모바일은 한 손 조작, PC는 넓은 콘텐츠 영역 */
 @media (min-width:760px){
  body{padding:24px;background:linear-gradient(135deg,#d8f3f5,#e8f2ff)}
@@ -25,7 +32,7 @@
  .draw-page{max-width:720px;margin:auto}
  .draw-card{height:340px}
  .draw-card.result-ready{min-height:430px}
- .real-map{height:520px}
+ .real-map{height:clamp(400px,58svh,560px)!important}
  #seller form{display:grid;grid-template-columns:repeat(2,1fr);gap:0 22px}
  #seller form label{margin:15px 0}
  #seller form fieldset,#seller form button{grid-column:1 / -1}
